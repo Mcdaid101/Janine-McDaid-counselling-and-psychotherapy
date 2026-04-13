@@ -1,0 +1,11 @@
+.nav-logo {
+	background-image: url('./assets/circlelogo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.modal-logo {
+	background-image: url('./assets/circlelogo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
