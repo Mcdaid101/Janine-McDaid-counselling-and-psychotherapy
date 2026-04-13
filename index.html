@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://kit.fontawesome.com/602c42d7e5.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
 <body class="font-sans text-lg font-light tracking-wide overflow-x-hidden">
@@ -348,7 +349,7 @@
 <section class="relative w-full min-h-[90vh] flex items-center justify-center overflow-hidden">
   <!-- Background Image -->
   <div
-    class="absolute inset-0 bg-cover bg-center bg-no-repeat hero-background"
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat quotes-background"
   ></div>
 
   <!-- Warm colour overlay — softens the image and keeps text readable -->
@@ -357,38 +358,153 @@
   <!-- Content -->
   <div class="relative z-10 w-full px-6 sm:px-10 py-20 text-center max-w-3xl mx-auto">
 
-    <!-- Eyebrow tag -->
-    <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-4">
-      Counselling & Psychotherapy — Donegal
+   <!-- Eyebrow -->
+    <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-10">
+      Words of Comfort
     </p>
 
-    <!-- Main heading -->
-    <h1 class="font-[Playfair_Display] text-4xl sm:text-5xl md:text-6xl text-[#5C3D2A] leading-tight mb-6">
-      Find clarity.<br/>Feel heard.<br/>Move forward.
-    </h1>
-
-    <!-- Subheading -->
-    <p class="font-[Inter] font-light text-[#3D3532] text-base sm:text-lg leading-relaxed max-w-xl mx-auto mb-10">
-      Life can be difficult — but you don't have to navigate it alone. In a warm,
-      fully confidential space, I'll support you in exploring your thoughts and emotions,
-      understanding what's holding you back, and finding a path toward healing and growth.
-    </p>
-
-    <!-- CTA Buttons -->
-    <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-      
-       <a href="contact.html"
-        class="bg-[#6A9E9F] hover:bg-[#4A7C7E] text-white font-[Playfair_Display] text-sm uppercase tracking-widest px-8 py-4 transition-colors duration-300"
-      >
-        Book a consultation
-      </a>
+    <!-- Quote display -->
+    <div id="quoteDisplay" style="transition: opacity 0.6s ease;">
+      <p id="quoteText" class="font-[Playfair_Display] text-xl sm:text-2xl text-[#3D3532] leading-relaxed italic mb-6"></p>
+      <p id="quoteAuthor" class="font-[Inter] font-light text-[#6A9E9F] text-sm uppercase tracking-widest"></p>
     </div>
+
 
   </div>
   <!-- Subtle bottom fade into the next section -->
   <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F2EFE8] to-transparent"></div>
 </section>
 
+<section class="w-full bg-[#F2EFE8] py-16 sm:py-24">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10">
+    <div class="flex flex-col lg:flex-row-reverse items-center gap-12 lg:gap-20">
+
+      <!-- Image (right on mobile, left on desktop due to row-reverse) -->
+      <div class="w-full lg:w-1/2 flex-shrink-0">
+        <img
+          src="./assets/help.jpg"
+          alt="Begin your journey with Janine McDaid"
+          class="w-full max-w-md mx-auto lg:mx-0 object-cover rounded-sm shadow-sm"
+        />
+        
+      </div>
+
+      <!-- Text + Button -->
+      <div class="w-full lg:w-1/2 text-center lg:text-left">
+
+        <!-- Eyebrow -->
+        <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-4">
+          Take the First Step
+        </p>
+
+        <!-- Heading -->
+        <h2 class="font-[Playfair_Display] text-3xl sm:text-4xl text-[#5C3D2A] leading-snug mb-6">
+          Ready to begin your journey?
+        </h2>
+
+        <!-- Body -->
+        <p class="font-[Inter] font-light text-[#3D3532] text-base leading-relaxed mb-4">
+          Reaching out is often the hardest part — and you've already taken it by being here. Whether you have questions or you're ready to book, I'd love to hear from you.
+        </p>
+        <p class="font-[Inter] font-light text-[#3D3532] text-base leading-relaxed mb-10">
+          All enquiries are completely confidential. Sessions are available in person in Donegal and online — whichever feels most comfortable for you.
+        </p>
+
+        <!-- Booking Button -->
+        <a
+          href="contact.html"
+          class="inline-block bg-[#6A9E9F] hover:bg-[#4A7C7E] text-white font-[Playfair_Display] text-sm uppercase tracking-widest px-10 py-4 transition-colors duration-300">
+          Book a Consultation
+        </a>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer class="w-full bg-[#5C3D2A] py-16">
+  <div class="max-w-6xl mx-auto px-6 sm:px-10">
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+      <!-- Brand -->
+      <div class="flex flex-col gap-5 col-span-1 sm:col-span-2 lg:col-span-1">
+        <div class="nav-logo w-20 h-20"></div>
+        <p class="font-[Playfair_Display] text-white text-base leading-snug">
+          Janine McDaid
+        </p>
+        <p class="font-[Inter] font-light text-white/60 text-sm leading-relaxed">
+          Counselling & Psychotherapy<br/>Donegal
+        </p>
+        <p class="font-[Inter] font-light text-white/40 text-xs leading-relaxed">
+          Providing a safe, confidential space for healing and growth — in person and online.
+        </p>
+      </div>
+
+      <!-- Navigation -->
+      <div class="flex flex-col gap-4">
+        <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">
+          Navigation
+        </h6>
+        <a href="index.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Home</a>
+        <a href="about.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">About Janine</a>
+        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Therapies</a>
+        <a href="contact.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Contact</a>
+      </div>
+
+      <!-- Services -->
+      <div class="flex flex-col gap-4">
+        <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">
+          Services
+        </h6>
+        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Counselling</a>
+        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Psychotherapy</a>
+        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Grief & Loss</a>
+        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Trauma</a>
+        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Anxiety</a>
+        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Lack of Direction</a>
+      </div>
+
+      <!-- Contact -->
+      <div class="flex flex-col gap-4">
+        <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">
+          Get in Touch
+        </h6>
+        <a href="tel:+353089123456" class="flex items-center gap-3 font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
+          </svg>
+          +353 089 123 456
+        </a>
+        <a href="mailto:Janinemcdaid@hotmail.com" class="flex items-center gap-3 font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
+            <rect x="2" y="4" width="20" height="16" rx="2"/>
+          </svg>
+          Janinemcdaid@hotmail.com
+        </a>
+        <i class="text-white fa-brands fa-facebook"></i>
+        <i class="text-white fa-brands fa-instagram"></i>
+        <a href="contact.html" class="inline-block mt-4 border border-white/30 text-white/70 hover:border-white hover:text-white font-[Playfair_Display] text-xs uppercase tracking-widest px-6 py-3 transition-colors duration-300 text-center">
+          Book a Consultation
+        </a>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="border-t border-white/10 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="font-[Inter] font-light text-white/30 text-xs">
+        &copy; 2025 Janine McDaid Counselling & Psychotherapy. All rights reserved.
+      </p>
+      <p class="font-[Inter] font-light text-white/30 text-xs">
+        Donegal, Ireland &nbsp;·&nbsp; In person & online
+      </p>
+    </div>
+
+  </div>
+</footer>
 
 <!-- Mobile menu -->
 <div id="mobileMenu" class="fixed inset-0 z-50 hidden bg-[#F2EFE8] flex flex-col">
