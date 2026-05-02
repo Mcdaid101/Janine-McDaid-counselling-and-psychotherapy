@@ -1,5 +1,3 @@
-// ─── Mobile Menu ─────────────────────────────────────────────────────────────
-
 const menuBtn = document.getElementById('menuBtn');
 const closeBtn = document.getElementById('closeBtn');
 const mobileMenu = document.getElementById('mobileMenu');
@@ -12,76 +10,26 @@ closeBtn.addEventListener('click', () => {
   mobileMenu.classList.add('hidden');
 });
 
-
-// ─── Services Carousel (responsive: 1 card mobile / 2 cards desktop) ─────────
-
-(function () {
   const track = document.getElementById('carouselTrack');
-  const slides = Array.from(track.querySelectorAll('.carousel-slide'));
-  const dotContainer = document.getElementById('dotContainer');
-  const prevBtn = document.getElementById('prevSlide');
-  const nextBtn = document.getElementById('nextSlide');
+  const dots = document.querySelectorAll('.dot');
+  const total = 3;
+  let current = 0;
 
-  let currentIndex = 0;
-  let isDesktop = window.innerWidth >= 640;
-  let totalSteps = 0;
-
-  function getStepCount() {
-    return isDesktop ? Math.ceil(slides.length / 2) : slides.length;
-  }
-
-  function buildDots() {
-    dotContainer.innerHTML = '';
-    totalSteps = getStepCount();
-    for (let i = 0; i < totalSteps; i++) {
-      const dot = document.createElement('button');
-      dot.className = 'w-2 h-2 rounded-full bg-[#6A9E9F] transition-opacity dot';
-      dot.style.opacity = i === currentIndex ? '1' : '0.4';
-      dot.addEventListener('click', () => goTo(i));
-      dotContainer.appendChild(dot);
-    }
-  }
-
-  function updateSlideWidths() {
-    isDesktop = window.innerWidth >= 640;
-    slides.forEach(slide => {
-      slide.style.minWidth = isDesktop ? '50%' : '100%';
+  function goToSlide(index) {
+    current = (index + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((dot, i) => {
+      dot.style.opacity = i === current ? '1' : '0.4';
     });
   }
 
-  function goTo(index) {
-    totalSteps = getStepCount();
-    currentIndex = Math.max(0, Math.min(index, totalSteps - 1));
+  document.getElementById('prevSlide').addEventListener('click', () => goToSlide(current - 1));
+  document.getElementById('nextSlide').addEventListener('click', () => goToSlide(current + 1));
 
-    const offset = isDesktop ? currentIndex * 2 : currentIndex;
-    track.style.transform = `translateX(-${offset * (100 / slides.length)}%)`;
-
-    dotContainer.querySelectorAll('.dot').forEach((dot, i) => {
-      dot.style.opacity = i === currentIndex ? '1' : '0.4';
-    });
-  }
-
-  function rebuild() {
-    updateSlideWidths();
-    buildDots();
-    currentIndex = Math.min(currentIndex, getStepCount() - 1);
-    goTo(currentIndex);
-  }
-
-  prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-  nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
-
-  let resizeTimer;
-  window.addEventListener('resize', () => {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(rebuild, 150);
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => goToSlide(i));
   });
 
-  rebuild();
-})();
-
-
-// ─── Rotating Quotes ──────────────────────────────────────────────────────────
 
 const quotes = [
   { text: "You don't have to control your thoughts. You just have to stop letting them control you.", author: "Dan Millman" },
@@ -96,6 +44,7 @@ const quotes = [
   { text: "You don't have to be positive all the time. It's perfectly okay to feel sad, angry, annoyed, or anxious. Having feelings doesn't make you a negative person — it makes you human.", author: "Lori Deschene" }
 ];
 
+// Shuffle the array so the order is different every visit
 const shuffled = quotes.sort(() => Math.random() - 0.5);
 let currentQuote = 0;
 
@@ -104,17 +53,21 @@ function displayQuote(index) {
   const quoteText = document.getElementById('quoteText');
   const quoteAuthor = document.getElementById('quoteAuthor');
 
+  // Fade out
   display.style.opacity = '0';
 
   setTimeout(() => {
     quoteText.textContent = `"${shuffled[index].text}"`;
     quoteAuthor.textContent = `— ${shuffled[index].author}`;
+    // Fade in
     display.style.opacity = '1';
   }, 600);
 }
 
+// Show first quote immediately
 displayQuote(currentQuote);
 
+// Rotate every 6 seconds
 setInterval(() => {
   currentQuote = (currentQuote + 1) % shuffled.length;
   displayQuote(currentQuote);
