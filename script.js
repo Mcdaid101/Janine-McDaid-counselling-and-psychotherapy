@@ -72,3 +72,28 @@ setInterval(() => {
   currentQuote = (currentQuote + 1) % shuffled.length;
   displayQuote(currentQuote);
 }, 8000);
+
+
+emailjs.init("_xtsMWw8UdR01bapy");
+
+document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const btn = document.getElementById("submitBtn");
+  btn.textContent = "Sending...";
+  btn.disabled = true;
+
+  emailjs.sendForm("janine_contact", "template_xmf21il", this)
+    .then(() => {
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+      document.getElementById("successMsg").classList.remove("hidden");
+      this.reset();
+    })
+    .catch((error) => {
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+      document.getElementById("errorMsg").classList.remove("hidden");
+      console.error("EmailJS error:", error);
+    });
+});

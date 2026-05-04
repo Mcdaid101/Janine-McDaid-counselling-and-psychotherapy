@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/602c42d7e5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <link rel="stylesheet" href="styles.css">
   </head>
 <body class="font-sans text-lg font-light tracking-wide overflow-x-hidden">
@@ -160,7 +161,7 @@
             Use this form to get in touch with Janine directly — whether you'd like to book a session, ask about a particular therapy, or simply have a general question. Janine will get back to you as soon as possible.
           </p>
 
-          <form class="space-y-7">
+          <form id="contactForm" class="space-y-7">
 
             <!-- Name -->
             <div>
@@ -172,6 +173,7 @@
                   <span class="block font-[Inter] text-xs uppercase tracking-[0.12em] text-[#3D3532]/60 mb-2">First Name</span>
                   <input
                     type="text"
+                    name="first_name"
                     class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
                   />
                 </div>
@@ -179,6 +181,7 @@
                   <span class="block font-[Inter] text-xs uppercase tracking-[0.12em] text-[#3D3532]/60 mb-2">Last Name</span>
                   <input
                     type="text"
+                    name="last_name"
                     class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
                   />
                 </div>
@@ -192,6 +195,7 @@
               </label>
               <input
                 type="email"
+                name="from_email"
                 class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
               />
             </div>
@@ -203,73 +207,86 @@
               </label>
               <input
                 type="tel"
+                name="phone"
                 class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
               />
             </div>
 
             <!-- Enquiry Type -->
             <div>
-              <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
-                What can I help you with?
-              </label>
-              <select class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none">
-                <option value="">Select an option...</option>
-                <option value="booking">Booking a session</option>
-                <option value="online">Online sessions</option>
-                <option value="general">General question</option>
-                <option value="anxiety">Anxiety & overwhelm</option>
-                <option value="stress">Stress & burnout</option>
-                <option value="depression">Depression & low mood</option>
-                <option value="grief">Grief, loss & bereavement</option>
-                <option value="relationships">Relationship challenges</option>
-                <option value="family">Family issues</option>
-                <option value="growth">Personal growth</option>
-                <option value="confidence">Confidence & low self-esteem</option>
-                <option value="trauma">Trauma & emotional difficulties</option>
-                <option value="transitions">Life transitions (menopause, career changes)</option>
-                <option value="direction">Feeling stuck / lack of direction</option>
-              </select>
-            </div>
+  <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
+    What can I help you with?
+  </label>
+  <select name="subject" class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none">
+    <option value="">Select an option...</option>
+    <option value="Booking a session">Booking a session</option>
+    <option value="Online sessions">Online sessions</option>
+    <option value="General question">General question</option>
+    <option value="Anxiety & overwhelm">Anxiety & overwhelm</option>
+    <option value="Stress & burnout">Stress & burnout</option>
+    <option value="Depression & low mood">Depression & low mood</option>
+    <option value="Grief, loss & bereavement">Grief, loss & bereavement</option>
+    <option value="Relationship challenges">Relationship challenges</option>
+    <option value="Family issues">Family issues</option>
+    <option value="Personal growth">Personal growth</option>
+    <option value="Confidence & low self-esteem">Confidence & low self-esteem</option>
+    <option value="Trauma & emotional difficulties">Trauma & emotional difficulties</option>
+    <option value="Life transitions (menopause, career changes)">Life transitions (menopause, career changes)</option>
+    <option value="Feeling stuck / lack of direction">Feeling stuck / lack of direction</option>
+  </select>
+</div>
 
-            <!-- Preferred Contact Method -->
-            <div>
-              <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
-                Preferred contact method
-              </label>
-              <div class="flex gap-6">
-                <label class="flex items-center gap-2 font-[Inter] font-light text-sm text-[#3D3532] cursor-pointer">
-                  <input type="radio" name="contactMethod" value="email" checked class="accent-[#6A9E9F]"/> Email
-                </label>
-                <label class="flex items-center gap-2 font-[Inter] font-light text-sm text-[#3D3532] cursor-pointer">
-                  <input type="radio" name="contactMethod" value="phone" class="accent-[#6A9E9F]"/> Phone
-                </label>
-              </div>
-            </div>
+<!-- Preferred Contact Method -->
+<div>
+  <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
+    Preferred contact method
+  </label>
+  <div class="flex gap-6">
+    <label class="flex items-center gap-2 font-[Inter] font-light text-sm text-[#3D3532] cursor-pointer">
+      <input type="radio" name="preferred_contact" value="Email" checked class="accent-[#6A9E9F]"/> Email
+    </label>
+    <label class="flex items-center gap-2 font-[Inter] font-light text-sm text-[#3D3532] cursor-pointer">
+      <input type="radio" name="preferred_contact" value="Phone" class="accent-[#6A9E9F]"/> Phone
+    </label>
+  </div>
+</div>
 
-            <!-- Message -->
-            <div>
-              <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
-                Message <span class="text-[#6A9E9F]">(required)</span>
-              </label>
-              <textarea
-                rows="6"
-                placeholder="Share as much or as little as you'd like. There is no right or wrong thing to say."
-                class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none resize-none placeholder:text-[#3D3532]/40"
-              ></textarea>
-            </div>
+<!-- Message -->
+<div>
+  <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
+    Message <span class="text-[#6A9E9F]">(required)</span>
+  </label>
+  <textarea
+    name="message"
+    rows="6"
+    placeholder="Share as much or as little as you'd like. There is no right or wrong thing to say."
+    class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none resize-none placeholder:text-[#3D3532]/40"
+  ></textarea>
+</div>
 
             <!-- Submit -->
-            <div>
-              <button
-                type="submit"
-                class="inline-block bg-[#6A9E9F] hover:bg-[#4A7C7E] text-white font-[Playfair_Display] text-sm uppercase tracking-widest px-10 py-4 transition-colors duration-300"
-              >
-                Send Message
-              </button>
-              <p class="font-[Inter] font-light text-[#3D3532]/50 text-xs mt-3">
-                Janine will respond within 1–2 business days. All messages are completely confidential.
-              </p>
-            </div>
+<div>
+  <button id="submitBtn"
+    type="submit"
+    class="inline-block bg-[#6A9E9F] hover:bg-[#4A7C7E] text-white font-[Playfair_Display] text-sm uppercase tracking-widest px-10 py-4 transition-colors duration-300"
+  >
+    Send Message
+  </button>
+
+  <!-- Success Message -->
+  <p id="successMsg" class="hidden font-[Inter] font-light text-[#6A9E9F] text-sm mt-4">
+    Thank you — your message has been sent. Janine will be in touch shortly.
+  </p>
+
+  <!-- Error Message -->
+  <p id="errorMsg" class="hidden font-[Inter] font-light text-red-500 text-sm mt-4">
+    Something went wrong. Please try again or email directly at Janinekeys9@gmailmail.com
+  </p>
+
+  <p class="font-[Inter] font-light text-[#3D3532]/50 text-xs mt-3">
+    Janine will respond within 1–2 business days. All messages are completely confidential.
+  </p>
+</div>
 
           </form>
         </div>
