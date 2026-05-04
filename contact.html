@@ -163,61 +163,65 @@
 
           <form id="contactForm" class="space-y-7">
 
-            <!-- Name -->
-            <div>
-              <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
-                Name <span class="text-[#6A9E9F]">(required)</span>
-              </label>
-              <div class="grid gap-4 md:grid-cols-2">
-                <div>
-                  <span class="block font-[Inter] text-xs uppercase tracking-[0.12em] text-[#3D3532]/60 mb-2">First Name</span>
-                  <input
-                    type="text"
-                    name="first_name"
-                    class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
-                  />
-                </div>
-                <div>
-                  <span class="block font-[Inter] text-xs uppercase tracking-[0.12em] text-[#3D3532]/60 mb-2">Last Name</span>
-                  <input
-                    type="text"
-                    name="last_name"
-                    class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
-                  />
-                </div>
-              </div>
-            </div>
+<!-- Name -->
+<div>
+  <label for="first_name" class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
+    Name <span class="text-[#6A9E9F]">(required)</span>
+  </label>
+  <div class="grid gap-4 md:grid-cols-2">
+    <div>
+      <span class="block font-[Inter] text-xs uppercase tracking-[0.12em] text-[#3D3532]/60 mb-2">First Name</span>
+      <input
+        type="text"
+        id="first_name"
+        name="first_name"
+        class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
+      />
+    </div>
+    <div>
+      <span class="block font-[Inter] text-xs uppercase tracking-[0.12em] text-[#3D3532]/60 mb-2">Last Name</span>
+      <input
+        type="text"
+        id="last_name"
+        name="last_name"
+        class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
+      />
+    </div>
+  </div>
+</div>
 
-            <!-- Email -->
-            <div>
-              <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
-                Email <span class="text-[#6A9E9F]">(required)</span>
-              </label>
-              <input
-                type="email"
-                name="from_email"
-                class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
-              />
-            </div>
+<!-- Email -->
+<div>
+  <label for="from_email" class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
+    Email <span class="text-[#6A9E9F]">(required)</span>
+  </label>
+  <input
+    type="email"
+    id="from_email"
+    name="from_email"
+    class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
+  />
+</div>
 
-            <!-- Phone -->
-            <div>
-              <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
-                Phone <span class="text-[#3D3532]/40">(optional)</span>
-              </label>
-              <input
-                type="tel"
-                name="phone"
-                class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
-              />
-            </div>
+<!-- Phone -->
+<div>
+  <label for="phone" class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
+    Phone <span class="text-[#3D3532]/40">(optional)</span>
+  </label>
+  <input
+    type="tel"
+    id="phone"
+    name="phone"
+    class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none"
+  />
+</div>
 
-            <!-- Enquiry Type -->
-            <div>
-  <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
+<!-- Enquiry Type -->
+<div>
+  <label for="subject" class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
     What can I help you with?
   </label>
-  <select name="subject" class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none">
+  <select id="subject" name="subject" class="w-full border border-[#F0DDE0] bg-[#F2EFE8] px-4 py-3 text-sm font-[Inter] font-light text-[#3D3532] outline-none focus:border-[#6A9E9F] transition rounded-none">
     <option value="">Select an option...</option>
     <option value="Booking a session">Booking a session</option>
     <option value="Online sessions">Online sessions</option>
@@ -242,21 +246,22 @@
     Preferred contact method
   </label>
   <div class="flex gap-6">
-    <label class="flex items-center gap-2 font-[Inter] font-light text-sm text-[#3D3532] cursor-pointer">
-      <input type="radio" name="preferred_contact" value="Email" checked class="accent-[#6A9E9F]"/> Email
+    <label for="contact_email" class="flex items-center gap-2 font-[Inter] font-light text-sm text-[#3D3532] cursor-pointer">
+      <input type="radio" id="contact_email" name="preferred_contact" value="Email" checked class="accent-[#6A9E9F]"/> Email
     </label>
-    <label class="flex items-center gap-2 font-[Inter] font-light text-sm text-[#3D3532] cursor-pointer">
-      <input type="radio" name="preferred_contact" value="Phone" class="accent-[#6A9E9F]"/> Phone
+    <label for="contact_phone" class="flex items-center gap-2 font-[Inter] font-light text-sm text-[#3D3532] cursor-pointer">
+      <input type="radio" id="contact_phone" name="preferred_contact" value="Phone" class="accent-[#6A9E9F]"/> Phone
     </label>
   </div>
 </div>
 
 <!-- Message -->
 <div>
-  <label class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
+  <label for="message" class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
     Message <span class="text-[#6A9E9F]">(required)</span>
   </label>
   <textarea
+    id="message"
     name="message"
     rows="6"
     placeholder="Share as much or as little as you'd like. There is no right or wrong thing to say."
