@@ -7,7 +7,40 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://kit.fontawesome.com/602c42d7e5.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+              publicKey: "_xtsMWw8UdR01bapy",
+            });
+        })();
+    </script>
+ <script type="text/javascript">
+        window.onload = function() {
+          document.getElementById("contactForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const btn = document.getElementById("submitBtn");
+  btn.textContent = "Sending...";
+  btn.disabled = true;
+
+  emailjs.sendForm("janine_contact", "template_xmf21il", this)
+    .then(() => {
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+      document.getElementById("successMsg").classList.remove("hidden");
+      this.reset();
+    })
+    .catch((error) => {
+      btn.textContent = "Send Message";
+      btn.disabled = false;
+      document.getElementById("errorMsg").classList.remove("hidden");
+      console.error("EmailJS error:", error);
+    });
+});
+        }
+    </script>
     <link rel="stylesheet" href="styles.css">
   </head>
 <body class="font-sans text-lg font-light tracking-wide overflow-x-hidden">
