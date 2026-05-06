@@ -4,10 +4,8 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-  "build": "tailwindcss -i ./input.css -o ./styles.css --minify",
-  "dev": "tailwindcss -i ./input.css -o ./styles.css --watch"
-}
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
