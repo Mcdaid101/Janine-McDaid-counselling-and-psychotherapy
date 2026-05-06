@@ -30,6 +30,7 @@
   const btn = document.getElementById("submitBtn");
   btn.textContent = "Sending...";
   btn.disabled = true;
+  document.getElementById('time').value = new Date().toLocaleString('en-IE', {timeZone: 'Europe/Dublin'});
 
   emailjs.sendForm("janine_contact", "template_xmf21il", this)
     .then(() => {
@@ -293,7 +294,7 @@
     </label>
   </div>
 </div>
-
+<input type="hidden" name="time" id="time">
 <!-- Message -->
 <div>
   <label for="message" class="block font-[Inter] text-xs uppercase tracking-[0.15em] text-[#5C3D2A] mb-3">
@@ -324,7 +325,7 @@
 
   <!-- Error Message -->
   <p id="errorMsg" class="hidden font-[Inter] font-light text-red-500 text-sm mt-4">
-    Something went wrong. Please try again or email directly at Janinekeys9@gmailmail.com
+    Something went wrong. Please try again or email directly at Janinekeys9@gmail.com
   </p>
 
   <p class="font-[Inter] font-light text-[#3D3532]/50 text-xs mt-3">
@@ -483,18 +484,6 @@
 </div>
 
   <script src="script.js"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            serif: ['"Playfair Display"', 'ui-serif', 'Georgia'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
 
 </body>
 
