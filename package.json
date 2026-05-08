@@ -4,14 +4,16 @@
   "description": "",
   "main": "script.js",
   "scripts": {
-  "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@tailwindcss/cli": "^4.2.4",
+    "@tailwindcss/cli": "^4.2.4"
+  },
+  "devDependencies": {
     "tailwindcss": "^4.2.4"
   }
 }
