@@ -1,411 +1,384 @@
 <!doctype html>
-<html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
-    <link rel="manifest" href="/favicon/site.webmanifest">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+    <title>Therapies | Janine McDaid Counselling & Psychotherapy</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- DaisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+
+    <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/602c42d7e5.js" crossorigin="anonymous"></script>
-    <link href="./dist/output.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind (built) + Custom Styles -->
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="styles.css" rel="stylesheet" />
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
   </head>
-<body class="font-sans text-lg font-light tracking-wide overflow-x-hidden">
 
-<!-- NAVBAR -->
-<nav class="bg-[#F5F0EB] h-[92px] w-full">
-  <div class="max-w-7xl mx-auto px-4 h-full">
-    <div class="flex h-full items-center justify-between">
+  <body class="font-sans text-lg font-light tracking-wide overflow-x-hidden">
 
-      <!-- Logo + Name -->
-      <a href="index.html" class="flex items-center gap-4 no-underline">
-        <div class="nav-logo h-16 w-16 flex-shrink-0"></div>
-        <div class="flex flex-col leading-tight">
-          <span class="font-[Playfair_Display] text-[#001A46] text-base font-semibold tracking-wide">
-            Janine McDaid
-          </span>
-          <span class="font-[Playfair_Display] text-[#6A9E9F] text-xs font-light tracking-widest uppercase">
-            Counselling & Psychotherapy
-          </span>
-        </div>
-      </a>
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="bg-[#F5F0EB] h-[92px] w-full">
+      <div class="max-w-7xl mx-auto px-4 h-full">
+        <div class="flex h-full items-center justify-between">
 
-      <!-- Desktop Links -->
-      <div class="hidden lg:flex space-x-8 font-[Playfair_Display] font-light">
-        <a href="index.html" class="text-gray-700 hover:text-[#5C3D2A] transition-colors">Home</a>
-        <a href="about.html" class="text-gray-700 hover:text-[#5C3D2A] transition-colors">About</a>
-        <a href="therapies.html" class="text-gray-700 hover:text-[#5C3D2A] transition-colors">Therapies</a>
-        <a href="contact.html" class="text-gray-700 hover:text-[#5C3D2A] transition-colors">Contact</a>
-      </div>
-
-      <!-- Mobile Menu Button -->
-      <button id="menuBtn" class="lg:hidden p-2 text-[#5C3D2A] focus:outline-none">
-        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M4 6h16M4 12h16M4 18h16" />
-        </svg>
-      </button>
-
-    </div>
-  </div>
-</nav>
-
-<section class="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
-  <!-- Background Image -->
-  <div
-    class="absolute inset-0 bg-cover bg-center bg-no-repeat quotes-background"
-  ></div>
-
-  <!-- Warm colour overlay — softens the image and keeps text readable -->
-  <div class="absolute inset-0 bg-[#F2EFE8]/60"></div>
-
-  <!-- Content -->
-  <div class="relative z-10 w-full px-6 sm:px-10 py-20 text-center max-w-3xl mx-auto">
-
-    <!-- Eyebrow tag -->
-    <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-4">
-      Therapies
-    </p>
-
-    <!-- Main heading -->
-    <h1 class="font-[Playfair_Display] text-4xl sm:text-5xl md:text-6xl text-[#5C3D2A] leading-tight mb-6">
-      Counselling & Psychotherapy
-    </h1>
-
-  </div>
-  <!-- Subtle bottom fade into the next section -->
-  <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F2EFE8] to-transparent"></div>
-</section>
-
-<section class="w-full bg-[#F7F3EE] py-16 sm:py-24 lg:py-28">
-  <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      
-      <!-- Text -->
-      <div class="max-w-2xl">
-        <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-4">
-          Understanding Support
-        </p>
-
-        <h2 class="font-[Playfair_Display] text-2xl sm:text-3xl lg:text-4xl text-[#001A46] leading-snug mb-8">
-          What is Counselling &amp; Psychotherapy?
-        </h2>
-
-        <div class="font-[Inter] text-base leading-7 space-y-5">
-          
-          <p>
-            Counselling and psychotherapy offer a safe, confidential space to explore thoughts, feelings, and experiences that may feel difficult to carry alone.
-          </p>
-
-          <p>
-            It can help you make sense of what you are going through, gain new perspectives, and begin to understand yourself with greater compassion and clarity.
-          </p>
-
-          <p>
-            Many people come to therapy when they are facing anxiety, grief, trauma, relationship challenges, overwhelm, or a general sense that something in life feels out of balance.
-          </p>
-
-          <p>
-           As an integrative counsellor and psychotherapist I draw on different therapeutic methods including humanistic and person-centred
-           psychodynamic and cognitive behavioral therapy (CBT). Sessions are tailored to your individual needs and pace. 
-          </p>
-
-          <p>
-            Together, we create a space where you can feel heard, supported, and better able to move forward in a way that feels right for you.
-          </p>
-
-        </div>
-      </div>
-
-      <!-- Image -->
-      <div class="w-full flex justify-center lg:justify-end">
-        <div class="w-full max-w-[760px] aspect-[4/3] overflow-hidden shadow-sm">
-          <img
-            src="./assets/quotes.jpg"
-            alt="Counselling and psychotherapy support"
-            class="w-full h-full object-cover"
-          />
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<section class="w-full bg-[#F2EFE8] py-16 sm:py-24">
-  <div class="max-w-6xl mx-auto px-6 sm:px-10">
-
-    <!-- Section Heading -->
-    <div class="text-center mb-16">
-      <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-3">
-        How Counselling Can Help
-      </p>
-      <h2 class="font-[Playfair_Display] text-2xl sm:text-3xl text-[#001A46] font-semibold">
-        Support for Different Life Experiences
-      </h2>
-    </div>
-
-    <!-- Carousel wrapper -->
-    <div class="relative overflow-hidden w-full" id="servicesCarousel">
-      <!-- Track -->
-      <div id="carouselTrack" class="flex transition-transform duration-500 ease-in-out">
-
-        <!-- Slide 1 -->
-        <div class="min-w-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
-              <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Counselling</h3>
-              <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
-              <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
-                Counselling can help you talk things through in a safe, confidential space so you feel less alone with what you are carrying. It can support you in understanding your emotions, easing distress, and finding steadier ways to cope day to day.
-              </p>
+          <!-- Logo + Name -->
+          <a href="index.html" class="flex items-center gap-4 no-underline">
+            <div class="nav-logo h-16 w-16 flex-shrink-0"></div>
+            <div class="flex flex-col leading-tight">
+              <span class="font-[Playfair_Display] text-[#001A46] text-base font-semibold tracking-wide">
+                Janine McDaid
+              </span>
+              <span class="font-[Playfair_Display] text-[#6A9E9F] text-xs font-light tracking-widest uppercase">
+                Counselling & Psychotherapy
+              </span>
             </div>
+          </a>
 
-            <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
-              <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Psychotherapy</h3>
-              <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
-              <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
-                Psychotherapy explores the deeper patterns, experiences, and beliefs that shape how you feel and respond to life. It can help you build insight, strengthen self-awareness, and create lasting change over time.
-              </p>
-            </div>
+          <!-- Desktop Links -->
+          <div class="hidden lg:flex space-x-8 font-[Playfair_Display] font-light">
+            <a href="index.html" class="text-gray-700 hover:text-[#5C3D2A] transition-colors">Home</a>
+            <a href="about.html" class="text-gray-700 hover:text-[#5C3D2A] transition-colors">About</a>
+            <a href="therapies.html" class="text-gray-700 hover:text-[#5C3D2A] transition-colors">Therapies</a>
+            <a href="contact.html" class="text-gray-700 hover:text-[#5C3D2A] transition-colors">Contact</a>
           </div>
+
+          <!-- Mobile Menu Button -->
+          <button id="menuBtn" class="lg:hidden p-2 text-[#5C3D2A] focus:outline-none" aria-label="Open menu">
+            <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+
         </div>
-
-        <!-- Slide 2 -->
-        <div class="min-w-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
-              <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Grief & Loss</h3>
-              <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
-              <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
-                Grief can feel overwhelming, isolating, and unpredictable. Therapy offers space to process loss gently, honour what has changed, and begin finding a way forward at your own pace.
-              </p>
-            </div>
-
-            <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
-              <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Trauma</h3>
-              <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
-              <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
-                Trauma can affect how safe you feel in yourself, in relationships, and in daily life. A supportive therapeutic space can help you process difficult experiences carefully and rebuild a greater sense of safety and control.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 3 -->
-        <div class="min-w-full">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-            <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
-              <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Anxiety</h3>
-              <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
-              <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
-                Anxiety can leave you feeling tense, restless, or stuck in constant worry. Therapy can help you understand what is triggering it, calm the nervous system, and develop practical tools to feel more grounded.
-              </p>
-            </div>
-
-            <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
-              <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Lack of Direction</h3>
-              <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
-              <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
-                When life feels uncertain or you feel disconnected from yourself, therapy can help you reconnect with your values and priorities. It can give you space to reflect, gain clarity, and move forward with more confidence.
-              </p>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-
-    <!-- Arrows + Dots -->
-    <div class="flex items-center justify-center gap-6 mt-8">
-      <button id="prevSlide"
-        class="btn btn-circle bg-white border-[#F0DDE0] text-[#6A9E9F] hover:bg-[#4A7C7E] hover:text-white hover:border-[#5C3D2A]">
-        ❮
-      </button>
-
-      <div class="flex gap-3" id="dotContainer">
-        <button class="w-2 h-2 rounded-full bg-[#6A9E9F] opacity-100 transition-opacity dot"></button>
-        <button class="w-2 h-2 rounded-full bg-[#6A9E9F] opacity-40 transition-opacity dot"></button>
-        <button class="w-2 h-2 rounded-full bg-[#6A9E9F] opacity-40 transition-opacity dot"></button>
-      </div>
-
-      <button id="nextSlide"
-        class="btn btn-circle bg-white border-[#F0DDE0] text-[#6A9E9F] hover:bg-[#4A7C7E] hover:text-white hover:border-[#5C3D2A]">
-        ❯
-      </button>
-    </div>
-
-  </div>
-</section>
-
-<!-- DIVIDER (BETWEEN SECTIONS) -->
-<div class="bg-[#F2EFE8]">
-  <div class="h-px mx-auto w-10/12 bg-gradient-to-r from-transparent via-[#b7c7bd] to-transparent"></div>
-</div>
-
-
-<section class="w-full bg-[#F2EFE8] py-16 sm:py-24">
-  <div class="max-w-4xl mx-auto px-6 sm:px-10">
-
-    <div class="flex flex-col items-center text-center justify-center">
-
-      <!-- Eyebrow -->
-      <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-4">
-        Take the First Step
-      </p>
-
-      <!-- Heading -->
-      <h2 class="font-[Playfair_Display] text-3xl sm:text-4xl text-[#5C3D2A] leading-snug mb-6">
-        Ready to begin your journey?
-      </h2>
-
-      <!-- Body -->
-      <div class="space-y-4 font-[Inter] font-light text-[#3D3532] text-base leading-relaxed max-w-2xl">
-
-        <p>
-          Reaching out is often the hardest part — and you've already taken it by being here. Whether you have questions or you're ready to book, I'd love to hear from you.
-        </p>
-
-        <p>
-          All enquiries are completely confidential. Sessions are available in person in Donegal and online — whichever feels most comfortable for you.
-        </p>
-
-      </div>
-
-      <!-- Button -->
-      <div class="mt-10">
-        <a
-          href="contact.html"
-          class="inline-block bg-[#6A9E9F] hover:bg-[#4A7C7E] text-white font-[Playfair_Display] text-sm uppercase tracking-widest px-10 py-4 transition-colors duration-300">
-          Book a Consultation
-        </a>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-
-<footer class="w-full bg-[#001A46] text-white py-16">
-  <div class="max-w-6xl mx-auto px-6 sm:px-10">
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-
-      <!-- Brand -->
-      <div class="flex flex-col gap-5 col-span-1 sm:col-span-2 lg:col-span-1">
-        <div class="nav-logo w-20 h-20"></div>
-        <p class="font-[Playfair_Display] text-white text-base leading-snug">
-          Janine McDaid
-        </p>
-        <p class="font-[Inter] font-light text-white/60 text-sm leading-relaxed">
-          Counselling & Psychotherapy<br/>Donegal
-        </p>
-        <p class="font-[Inter] font-light text-white/40 text-xs leading-relaxed">
-          Providing a safe, confidential space for healing and growth — in person and online.
-        </p>
-      </div>
-
-      <!-- Navigation -->
-      <div class="flex flex-col gap-4">
-        <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">
-          Navigation
-        </h6>
-        <a href="index.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Home</a>
-        <a href="about.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">About Janine</a>
-        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Therapies</a>
-        <a href="contact.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Contact</a>
-      </div>
-
-      <!-- Services -->
-      <div class="flex flex-col gap-4">
-        <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">
-          Services
-        </h6>
-        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Counselling</a>
-        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Psychotherapy</a>
-        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Person Centered Therapy</a>
-        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Psychodynamic Therapy</a>
-        <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">CBT</a>
-      </div>
-
-      <!-- Contact -->
-      <div class="flex flex-col gap-4">
-        <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">
-          Get in Touch
-        </h6>
-        <a href="tel:+353089123456" class="flex items-center gap-3 font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/>
-          </svg>
-          +353 86 830 0561
-        </a>
-        <a href="mailto:Janinekeys@hotmail.com" class="flex items-center gap-3 font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/>
-            <rect x="2" y="4" width="20" height="16" rx="2"/>
-          </svg>
-          Janinekeys@hotmail.com
-        </a>
-        <i class="text-white fa-brands fa-facebook"></i>
-        <i class="text-white fa-brands fa-instagram"></i>
-        <a href="contact.html" class="inline-block mt-4 border border-white/30 text-white/70 hover:border-white hover:text-white font-[Playfair_Display] text-xs uppercase tracking-widest px-6 py-3 transition-colors duration-300 text-center">
-          Book a Consultation
-        </a>
-      </div>
-
-    </div>
-
-    <!-- Bottom bar -->
-    <div class="border-t border-white/10 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="font-[Inter] font-light text-white/30 text-xs">
-        &copy; 2026 Janine McDaid Counselling & Psychotherapy. All rights reserved.
-      </p>
-      <p class="font-[Inter] font-light text-white/30 text-xs">
-        Donegal, Ireland &nbsp;·&nbsp; In person & online
-      </p>
-    </div>
-
-  </div>
-</footer>
-
-<!-- Mobile menu -->
-<div id="mobileMenu" class="fixed inset-0 z-50 hidden bg-[#F2EFE8] flex flex-col">
-
-  <!-- Close Button row -->
-  <div class="flex justify-end p-6">
-    <button id="closeBtn" class="text-3xl font-light text-gray-700">
-      &times;
-    </button>
-  </div>
-
-  <!-- Logo + Links centred in remaining space -->
-  <div class="flex flex-col items-center justify-center flex-1 space-y-8">
-
-    <!-- Logo -->
-    <div class="modal-logo ml-11"></div>
-
-    <!-- Menu Links -->
-    <nav class="flex flex-col items-center space-y-8 font-[Playfair_Display] text-2xl font-medium">
-      <a href="index.html" class="hover:text-gray-500">Home</a>
-      <a href="about.html" class="hover:text-gray-500">About</a>
-      <a href="therapies.html" class="hover:text-gray-500">Therapies</a>
-      <a href="contact.html" class="hover:text-gray-500">Contact</a>
     </nav>
 
-  </div>
-</div>
+    <!-- ===================== HERO ===================== -->
+    <section class="relative w-full min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat quotes-background"></div>
+      <div class="absolute inset-0 bg-[#F2EFE8]/60"></div>
+      <div class="relative z-10 w-full px-6 sm:px-10 py-20 text-center max-w-3xl mx-auto">
+        <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-4">
+          Therapies
+        </p>
+        <h1 class="font-[Playfair_Display] text-4xl sm:text-5xl md:text-6xl text-[#5C3D2A] leading-tight mb-6">
+          Counselling & Psychotherapy
+        </h1>
+      </div>
+      <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F2EFE8] to-transparent"></div>
+    </section>
 
-  <script src="script.js"></script>
+    <!-- ===================== WHAT IS COUNSELLING ===================== -->
+    <section class="w-full bg-[#F7F3EE] py-16 sm:py-24 lg:py-28">
+      <div class="max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
 
-</body>
+          <!-- Text -->
+          <div class="max-w-2xl">
+            <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-4">
+              Understanding Support
+            </p>
+            <h2 class="font-[Playfair_Display] text-2xl sm:text-3xl lg:text-4xl text-[#001A46] leading-snug mb-8">
+              What is Counselling & Psychotherapy?
+            </h2>
+            <div class="font-[Inter] text-base leading-7 space-y-5">
+              <p>
+                Counselling and psychotherapy offer a safe, confidential space to explore thoughts, feelings, and
+                experiences that may feel difficult to carry alone.
+              </p>
+              <p>
+                It can help you make sense of what you are going through, gain new perspectives, and begin to understand
+                yourself with greater compassion and clarity.
+              </p>
+              <p>
+                Many people come to therapy when they are facing anxiety, grief, trauma, relationship challenges,
+                overwhelm, or a general sense that something in life feels out of balance.
+              </p>
+              <p>
+                As an integrative counsellor and psychotherapist I draw on different therapeutic methods including
+                humanistic and person-centred, psychodynamic, and cognitive behavioural therapy (CBT). Sessions are
+                tailored to your individual needs and pace.
+              </p>
+              <p>
+                Together, we create a space where you can feel heard, supported, and better able to move forward in
+                a way that feels right for you.
+              </p>
+            </div>
+          </div>
 
+          <!-- Image -->
+          <div class="w-full flex justify-center lg:justify-end">
+            <div class="w-full max-w-[760px] aspect-[4/3] overflow-hidden shadow-sm">
+              <img
+                src="./assets/quotes.jpg"
+                alt="Counselling and psychotherapy support"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== SERVICES CAROUSEL ===================== -->
+    <section class="w-full bg-[#F2EFE8] py-16 sm:py-24">
+      <div class="max-w-6xl mx-auto px-6 sm:px-10">
+
+        <div class="text-center mb-16">
+          <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-3">
+            How Counselling Can Help
+          </p>
+          <h2 class="font-[Playfair_Display] text-2xl sm:text-3xl text-[#001A46] font-semibold">
+            Support for Different Life Experiences
+          </h2>
+        </div>
+
+        <!-- Carousel -->
+        <div class="relative overflow-hidden w-full" id="servicesCarousel">
+          <div id="carouselTrack" class="flex transition-transform duration-500 ease-in-out">
+
+            <!-- Slide 1 -->
+            <div class="min-w-full">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
+                  <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Counselling</h3>
+                  <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
+                  <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
+                    Counselling can help you talk things through in a safe, confidential space so you feel less alone
+                    with what you are carrying. It can support you in understanding your emotions, easing distress, and
+                    finding steadier ways to cope day to day.
+                  </p>
+                </div>
+                <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
+                  <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Psychotherapy</h3>
+                  <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
+                  <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
+                    Psychotherapy explores the deeper patterns, experiences, and beliefs that shape how you feel and
+                    respond to life. It can help you build insight, strengthen self-awareness, and create lasting change
+                    over time.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="min-w-full">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
+                  <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Grief & Loss</h3>
+                  <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
+                  <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
+                    Grief can feel overwhelming, isolating, and unpredictable. Therapy offers space to process loss
+                    gently, honour what has changed, and begin finding a way forward at your own pace.
+                  </p>
+                </div>
+                <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
+                  <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Trauma</h3>
+                  <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
+                  <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
+                    Trauma can affect how safe you feel in yourself, in relationships, and in daily life. A supportive
+                    therapeutic space can help you process difficult experiences carefully and rebuild a greater sense
+                    of safety and control.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="min-w-full">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
+                  <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Anxiety</h3>
+                  <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
+                  <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
+                    Anxiety can leave you feeling tense, restless, or stuck in constant worry. Therapy can help you
+                    understand what is triggering it, calm the nervous system, and develop practical tools to feel
+                    more grounded.
+                  </p>
+                </div>
+                <div class="bg-white border border-[#F0DDE0] p-8 flex flex-col gap-4 hover:shadow-md transition-shadow duration-300">
+                  <h3 class="font-[Playfair_Display] text-xl text-[#001A46] font-semibold">Lack of Direction</h3>
+                  <div class="w-8 h-[1.5px] bg-[#6A9E9F]"></div>
+                  <p class="font-[Inter] font-light text-sm sm:text-base leading-relaxed">
+                    When life feels uncertain or you feel disconnected from yourself, therapy can help you reconnect
+                    with your values and priorities. It can give you space to reflect, gain clarity, and move forward
+                    with more confidence.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="flex items-center justify-center gap-6 mt-8">
+          <button id="prevSlide" aria-label="Previous slide"
+            class="btn btn-circle bg-white border-[#F0DDE0] text-[#6A9E9F] hover:bg-[#4A7C7E] hover:text-white hover:border-[#5C3D2A]">
+            ❮
+          </button>
+          <div class="flex gap-3" id="dotContainer">
+            <button class="w-2 h-2 rounded-full bg-[#6A9E9F] opacity-100 transition-opacity dot" aria-label="Slide 1"></button>
+            <button class="w-2 h-2 rounded-full bg-[#6A9E9F] opacity-40 transition-opacity dot" aria-label="Slide 2"></button>
+            <button class="w-2 h-2 rounded-full bg-[#6A9E9F] opacity-40 transition-opacity dot" aria-label="Slide 3"></button>
+          </div>
+          <button id="nextSlide" aria-label="Next slide"
+            class="btn btn-circle bg-white border-[#F0DDE0] text-[#6A9E9F] hover:bg-[#4A7C7E] hover:text-white hover:border-[#5C3D2A]">
+            ❯
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Divider -->
+    <div class="bg-[#F2EFE8]">
+      <div class="h-px mx-auto w-10/12 bg-gradient-to-r from-transparent via-[#b7c7bd] to-transparent"></div>
+    </div>
+
+    <!-- ===================== CTA ===================== -->
+    <section class="w-full bg-[#F2EFE8] py-16 sm:py-24">
+      <div class="max-w-4xl mx-auto px-6 sm:px-10">
+        <div class="flex flex-col items-center text-center justify-center">
+
+          <p class="font-[Playfair_Display] text-[#6A9E9F] text-sm uppercase tracking-[0.2em] mb-4">
+            Take the First Step
+          </p>
+          <h2 class="font-[Playfair_Display] text-3xl sm:text-4xl text-[#5C3D2A] leading-snug mb-6">
+            Ready to begin your journey?
+          </h2>
+          <div class="space-y-4 font-[Inter] font-light text-[#3D3532] text-base leading-relaxed max-w-2xl">
+            <p>
+              Reaching out is often the hardest part — and you've already taken it by being here. Whether you have
+              questions or you're ready to book, I'd love to hear from you.
+            </p>
+            <p>
+              All enquiries are completely confidential. Sessions are available in person in Donegal and online —
+              whichever feels most comfortable for you.
+            </p>
+          </div>
+          <div class="mt-10">
+            <a href="contact.html"
+              class="inline-block bg-[#6A9E9F] hover:bg-[#4A7C7E] text-white font-[Playfair_Display] text-sm uppercase tracking-widest px-10 py-4 transition-colors duration-300">
+              Book a Consultation
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="w-full bg-[#001A46] text-white py-16">
+      <div class="max-w-6xl mx-auto px-6 sm:px-10">
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+          <!-- Brand -->
+          <div class="flex flex-col gap-5 col-span-1 sm:col-span-2 lg:col-span-1">
+            <div class="nav-logo w-20 h-20"></div>
+            <p class="font-[Playfair_Display] text-white text-base leading-snug">Janine McDaid</p>
+            <p class="font-[Inter] font-light text-white/60 text-sm leading-relaxed">
+              Counselling & Psychotherapy<br />Donegal
+            </p>
+            <p class="font-[Inter] font-light text-white/40 text-xs leading-relaxed">
+              Providing a safe, confidential space for healing and growth — in person and online.
+            </p>
+          </div>
+
+          <!-- Navigation -->
+          <div class="flex flex-col gap-4">
+            <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">Navigation</h6>
+            <a href="index.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Home</a>
+            <a href="about.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">About Janine</a>
+            <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Therapies</a>
+            <a href="contact.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Contact</a>
+          </div>
+
+          <!-- Services -->
+          <div class="flex flex-col gap-4">
+            <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">Services</h6>
+            <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Counselling</a>
+            <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Psychotherapy</a>
+            <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Person Centred Therapy</a>
+            <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">Psychodynamic Therapy</a>
+            <a href="therapies.html" class="font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">CBT</a>
+          </div>
+
+          <!-- Contact -->
+          <div class="flex flex-col gap-4">
+            <h6 class="font-[Playfair_Display] text-white text-sm uppercase tracking-[0.15em] mb-2">Get in Touch</h6>
+            <a href="tel:+353089123456" class="flex items-center gap-3 font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+              </svg>
+              +353 86 830 0561
+            </a>
+            <a href="mailto:Janinekeys@hotmail.com" class="flex items-center gap-3 font-[Inter] font-light text-white/60 text-sm hover:text-white transition-colors duration-200">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+              </svg>
+              Janinekeys@hotmail.com
+            </a>
+            <div class="flex gap-4 mt-1">
+              <i class="text-white/60 hover:text-white transition-colors duration-200 fa-brands fa-facebook cursor-pointer"></i>
+              <i class="text-white/60 hover:text-white transition-colors duration-200 fa-brands fa-instagram cursor-pointer"></i>
+            </div>
+            <a href="contact.html"
+              class="inline-block mt-2 border border-white/30 text-white/70 hover:border-white hover:text-white font-[Playfair_Display] text-xs uppercase tracking-widest px-6 py-3 transition-colors duration-300 text-center">
+              Book a Consultation
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="border-t border-white/10 mt-14 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="font-[Inter] font-light text-white/30 text-xs">
+            &copy; 2026 Janine McDaid Counselling & Psychotherapy. All rights reserved.
+          </p>
+          <p class="font-[Inter] font-light text-white/30 text-xs">
+            Donegal, Ireland &nbsp;&middot;&nbsp; In person & online
+          </p>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- ===================== MOBILE MENU ===================== -->
+    <div id="mobileMenu" class="fixed inset-0 z-50 hidden bg-[#F2EFE8] flex flex-col">
+      <div class="flex justify-end p-6">
+        <button id="closeBtn" class="text-3xl font-light text-gray-700" aria-label="Close menu">&times;</button>
+      </div>
+      <div class="flex flex-col items-center justify-center flex-1 space-y-8">
+        <div class="modal-logo ml-11"></div>
+        <nav class="flex flex-col items-center space-y-8 font-[Playfair_Display] text-2xl font-medium">
+          <a href="index.html" class="hover:text-gray-500">Home</a>
+          <a href="about.html" class="hover:text-gray-500">About</a>
+          <a href="therapies.html" class="hover:text-gray-500">Therapies</a>
+          <a href="contact.html" class="hover:text-gray-500">Contact</a>
+        </nav>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+
+  </body>
 </html>
